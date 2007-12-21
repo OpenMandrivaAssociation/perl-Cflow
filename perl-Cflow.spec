@@ -9,6 +9,7 @@ Summary:	Cflow::find - find ``interesting'' flows in raw IP flow files
 Source:		http://net.doit.wisc.edu/~plonka/Cflow/Cflow-%{version}.tar.bz2
 URL:		http://net.doit.wisc.edu/~plonka/Cflow/
 BuildRequires:	perl-devel
+BuildRoot:	%{_tmppath}/%{name}-%{version}-root
 
 %description
 This package is of little use on its own. It requires input in the form of
