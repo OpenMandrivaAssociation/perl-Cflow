@@ -1,15 +1,15 @@
-%define modname	Cflow
+%define module	Cflow
 
-Name:		perl-%{modname}
+Name:		perl-%{module}
 Version:	1.053
-Release:	%mkrel 1
+Release:	%mkrel 2
 License:	GPL or Artistic
 Group:		Development/Perl
-Summary:	Cflow::find - find ``interesting'' flows in raw IP flow files
+Summary:	Find ``interesting'' flows in raw IP flow files
 Source:		http://net.doit.wisc.edu/~plonka/Cflow/Cflow-%{version}.tar.bz2
 URL:		http://net.doit.wisc.edu/~plonka/Cflow/
 BuildRequires:	perl-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}-root
+BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 This package is of little use on its own. It requires input in the form of
@@ -33,19 +33,15 @@ lfapd by Steve Premeau (with LFAPv4):
 
 
 %prep
-%setup -q -n %{modname}-%{version}
+%setup -q -n %{module}-%{version}
 
 %build
-perl Makefile.PL
+perl Makefile.PL INSTALLDIRS=vendor
 %make
 
 %install
 rm -Rf %{buildroot}
-%makeinstall_std INSTALLSITEARCH=%perl_vendorarch INSTALLSITEBIN=%{_bindir} INSTALLSITEMAN1DIR=%{_mandir}/man3 
-install -d %{buildroot}/%{_bindir} %{buildroot}/%{_mandir}/man3
-for i in `find %{buildroot}/%{_prefix}/local -type f`
-do mv ${i} ${i/local/}
-done
+%makeinstall_std
 
 %check
 make test
@@ -55,12 +51,8 @@ rm -Rf %{buildroot}
 
 %files
 %defattr(-,root,root)
-%dir %{perl_vendorarch}/auto/%{modname}
-%{perl_vendorarch}/auto/%{modname}/*
-%{perl_vendorarch}/%{modname}*
+%doc README
+%{perl_vendorarch}/auto/%{module}
+%{perl_vendorarch}/%{module}.pm
 %{_mandir}/man?/*
 %{_bindir}/flowdumper
-%doc README
-
-
-
