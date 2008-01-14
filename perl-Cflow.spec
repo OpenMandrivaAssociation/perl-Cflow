@@ -2,7 +2,7 @@
 
 Name:		perl-%{module}
 Version:	1.053
-Release:	%mkrel 2
+Release:	%mkrel 3
 License:	GPL or Artistic
 Group:		Development/Perl
 Summary:	Find ``interesting'' flows in raw IP flow files
