@@ -3,7 +3,7 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 9
+Release:	10
 
 Summary:	Find ``interesting'' flows in raw IP flow files
 License:	GPL+ or Artistic
