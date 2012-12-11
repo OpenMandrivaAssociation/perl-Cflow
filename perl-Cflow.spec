@@ -59,3 +59,53 @@ rm -Rf %{buildroot}
 %{perl_vendorarch}/%{upstream_name}.pm
 %{_mandir}/man?/*
 %{_bindir}/flowdumper
+
+
+%changelog
+* Wed Jan 25 2012 Per Øyvind Karlsen <peroyvind@mandriva.org> 1.53.0-10
++ Revision: 768358
+- svn commit -m mass rebuild of perl extension against perl 5.14.2
+
+* Sat May 28 2011 Funda Wang <fwang@mandriva.org> 1.53.0-9
++ Revision: 680772
+- mass rebuild
+
+* Tue Jul 20 2010 Jérôme Quelin <jquelin@mandriva.org> 1.53.0-8mdv2011.0
++ Revision: 555691
+- rebuild
+
+* Sat Feb 13 2010 Jérôme Quelin <jquelin@mandriva.org> 1.53.0-7mdv2010.1
++ Revision: 505421
+- rebuild using %%perl_convert_version
+
+* Fri Sep 04 2009 Thierry Vignaud <tv@mandriva.org> 1.053-6mdv2010.0
++ Revision: 430293
+- rebuild
+
+* Wed Jul 30 2008 Thierry Vignaud <tv@mandriva.org> 1.053-5mdv2009.0
++ Revision: 255673
+- rebuild
+
+* Mon Jan 14 2008 Thierry Vignaud <tv@mandriva.org> 1.053-3mdv2008.1
++ Revision: 151852
+- rebuild
+
+* Sat Dec 22 2007 Guillaume Rousse <guillomovitch@mandriva.org> 1.053-2mdv2008.1
++ Revision: 137192
+- spec cleanup
+
+* Fri Dec 21 2007 Olivier Blin <blino@mandriva.org> 1.053-1mdv2008.1
++ Revision: 136678
+- restore BuildRoot
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - kill re-definition of %%buildroot on Pixel's request
+
+
+* Sat Oct 28 2006 Nicolas Lécureuil <neoclust@mandriva.org> 1.053-1mdv2007.0
++ Revision: 73435
+- import perl-Cflow-1.053-1mdv2007.1
+
+* Fri Jul 07 2006 Buchan Milne <bgmilne@obsidian.co.za> 1.053-1mdv2007.0
+- first Mandriva package
+
