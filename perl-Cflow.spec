@@ -8,7 +8,7 @@ Release:	12
 Summary:	Find ``interesting'' flows in raw IP flow files
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://net.doit.wisc.edu/~plonka/%{upstream_name}/
+Url:		https://net.doit.wisc.edu/~plonka/%{upstream_name}/
 Source0:	http://net.doit.wisc.edu/~plonka/%{upstream_name}/%{upstream_name}-%{upstream_version}.tar.bz2
 
 BuildRequires:	perl-devel
