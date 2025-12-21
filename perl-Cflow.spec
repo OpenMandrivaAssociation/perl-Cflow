@@ -11,6 +11,7 @@ Group:		Development/Perl
 Url:		https://net.doit.wisc.edu/~plonka/%{upstream_name}/
 Source0:	http://net.doit.wisc.edu/~plonka/%{upstream_name}/%{upstream_name}-%{upstream_version}.tar.bz2
 
+BuildRequires:	make
 BuildRequires:	perl-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
