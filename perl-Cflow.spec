@@ -2,8 +2,8 @@
 %define upstream_version 1.053
 
 Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:	12
+Version:    %{upstream_version}
+Release:	13
 
 Summary:	Find ``interesting'' flows in raw IP flow files
 License:	GPL+ or Artistic
