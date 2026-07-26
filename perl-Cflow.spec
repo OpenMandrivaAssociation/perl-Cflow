@@ -1,15 +1,13 @@
 %define upstream_name	 Cflow
-%define upstream_version 1.053
-
 Name:       perl-%{upstream_name}
-Version:    %{upstream_version}
-Release:	13
+Version:    1.053
+Release:	14
 
 Summary:	Find ``interesting'' flows in raw IP flow files
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://net.doit.wisc.edu/~plonka/%{upstream_name}/
-Source0:	http://net.doit.wisc.edu/~plonka/%{upstream_name}/%{upstream_name}-%{upstream_version}.tar.bz2
+Source0:	http://net.doit.wisc.edu/~plonka/%{upstream_name}/%{upstream_name}-%{version}.tar.bz2
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -37,7 +35,7 @@ lfapd by Steve Premeau (with LFAPv4):
 
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -77,9 +75,7 @@ rm -Rf %{buildroot}
 
 * Sat Feb 13 2010 Jérôme Quelin <jquelin@mandriva.org> 1.53.0-7mdv2010.1
 + Revision: 505421
-- rebuild using %%perl_convert_version
-
-* Fri Sep 04 2009 Thierry Vignaud <tv@mandriva.org> 1.053-6mdv2010.0
+- rebuild using %1.053 Fri Sep 04 2009 Thierry Vignaud <tv@mandriva.org> 1.053-6mdv2010.0
 + Revision: 430293
 - rebuild
 
